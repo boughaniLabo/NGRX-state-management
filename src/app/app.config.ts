@@ -8,8 +8,7 @@ import { provideState, provideStore } from '@ngrx/store';
 import { counterReducer } from './states/counter/counter.reducer';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), provideAnimations(),
-     provideStore(),
-    provideState({name: 'counter', reducer: counterReducer })
-    ]
+  providers: [provideRouter(routes), provideClientHydration(), provideAnimations(), provideStore(),
+    provideState({ name: 'counter', reducer: counterReducer }),
+  ]
 };
